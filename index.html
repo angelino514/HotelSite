@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking & Resort - Premium</title>
+    <!-- Font Awesome para Ícones do Menu, Redes Sociais e Formulário -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link para o Ficheiro CSS Separado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Contentor Base Principal Solicitado -->
+    <div class="face">
+
+        <!-- BARRA SUPERIOR (Redes Sociais e Login) -->
+        <div class="top-bar">
+            <div class="face">
+                <div class="top-bar-left">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+                <div class="top-bar-right">
+                    <button class="btn-login"><i class="fa fa-user"></i> ENTRAR / REGISTAR-SE</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CABEÇALHO PRINCIPAL -->
+        <header class="main-header">
+
+            <div class="face">
+                <div class="logo">
+                    <span class="logo-letter">H</span>otel Booking
+                </div>
+
+                <!-- Navegação Desktop -->
+                <nav class="desktop-nav">
+                    <ul class="list">
+                        <li><a href="#" class="active">INÍCIO</a></li>
+                        <li><a href="#">SOBRE NÓS <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">QUARTOS <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">SERVIÇOS <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">GALERIA <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">BLOG <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">CONTACTO <i class="fa fa-chevron-down"></i></a></li>
+                    </ul>
+                </nav>
+
+                <a href="#" class="btn-book-now">RESERVAR JÁ</a>
+
+                <!-- Botão do Menu Hambúrguer (Mobile) -->
+                <button class="hamburger" id="hamburger-btn" aria-label="Abrir menu mobile">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+
+            <div class="face">
+                <!-- Navegação Desktop -->
+                <nav class="desktop-table">
+                    <ul class="list">
+                        <li><a href="#" class="active">INÍCIO</a></li>
+                        <li><a href="#">SOBRE NÓS <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">QUARTOS <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">SERVIÇOS <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">GALERIA <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">BLOG <i class="fa fa-chevron-down"></i></a></li>
+                        <li><a href="#">CONTACTO <i class="fa fa-chevron-down"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+
+        <!-- MENU MOBILE OVERLAY SLIDE -->
+        <div class="mobile-menu" id="mobile-menu-overlay">
+            <nav class="mobile-nav">
+                <ul>
+                    <li><a href="#" class="active">INÍCIO</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="#">QUARTOS</a></li>
+                    <li><a href="#">SERVIÇOS</a></li>
+                    <li><a href="#">GALERIA</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACTO</a></li>
+                    <li><a href="#" class="mobile-book-btn">RESERVAR JÁ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- SECÇÃO HERO COM CARROSSEL (SLIDER) -->
+        <section class="hero">
+            <div class="slider-container">
+                <!-- Slide 1 -->
+                <div class="slide active"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80');">
+                    <div class="hero-content">
+                        <h1 class="scroll-animate animated">Bem-vindo ao Hotely</h1>
+                        <p class="hero-subtitle scroll-animate animated delay-1">O LUGAR PERFEITO PARA A SUA ESTADIA</p>
+                        <a href="#" class="btn-explore scroll-animate animated delay-2">EXPLORAR AGORA <i
+                                class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide"
+                    style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200&q=80');">
+                    <div class="hero-content">
+                        <h1>Quartos e Suítes de Luxo</h1>
+                        <p class="hero-subtitle">EXPERIMENTE O MÁXIMO CONFORTO</p>
+                        <a href="#" class="btn-explore">EXPLORAR AGORA <i class="fa fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slide-arrow prev" id="prev-slide"><i class="fa fa-chevron-left"></i></button>
+            <button class="slide-arrow next" id="next-slide"><i class="fa fa-chevron-right"></i></button>
+
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+            </div>
+        </section>
+
+        <!-- SOLICITAÇÃO / WIDGET DE RESERVAS -->
+        <div class="booking-widget-container scroll-animate">
+            <form class="booking-form" id="bookingForm">
+                <div class="form-group">
+                    <label>E-mail <i class="fa fa-info-circle"></i></label>
+                    <input type="email" placeholder="Introduza o seu E-mail" required>
+                </div>
+                <div class="form-group">
+                    <label>Tipo de Quarto <i class="fa fa-info-circle"></i></label>
+                    <select required>
+                        <option value="">Selecione um quarto</option>
+                        <option value="deluxe">Suíte Deluxe</option>
+                        <option value="luxury">Quarto de Luxo</option>
+                        <option value="single">Quarto Individual</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Check-in <i class="fa fa-info-circle"></i></label>
+                    <input type="date" id="checkin" required>
+                </div>
+                <div class="form-group">
+                    <label>Check-out <i class="fa fa-info-circle"></i></label>
+                    <input type="date" id="checkout" required>
+                </div>
+                <div class="form-group guests-group">
+                    <label>Hóspedes</label>
+                    <div class="guests-control">
+                        <input type="number" value="1" min="1" max="10">
+                        <i class="fa fa-user user-icon"></i>
+                    </div>
+                </div>
+                <div class="form-group submit-group">
+                    <button type="submit" class="btn-widget-book">RESERVAR AGORA</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- SECÇÃO DE BOAS-VINDAS / QUARTOS -->
+        <section class="welcome-section">
+            <div class="scroll-animate">
+                <h2 class="section-title">BEM-VINDO AO NOSSO HOTEL</h2>
+                <div class="decorative-divider">
+                    <span class="line"></span>
+                    <i class="fa fa-leaf"></i>
+                    <span class="line"></span>
+                </div>
+                <p class="section-desc">
+                    Oferecemos uma experiência única de hospitalidade, combinando o requinte clássico com o conforto
+                    moderno. O nosso objetivo é tornar a sua estadia memorável e relaxante, cuidando de cada pequeno
+                    detalhe.
+                </p>
+            </div>
+
+            <div class="rooms-grid">
+                <div class="room-card scroll-animate delay-1">
+                    <div class="room-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=400&q=80');">
+                    </div>
+                </div>
+                <div class="room-card scroll-animate delay-2">
+                    <div class="room-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=400&q=80');">
+                    </div>
+                </div>
+                <div class="room-card scroll-animate delay-3">
+                    <div class="room-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=400&q=80');">
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn-view-all scroll-animate">Ver Todos os Quartos</a>
+        </section>
+
+        <!-- SECÇÃO INTERATIVA PORQUE ESCOLHER-NOS -->
+        <section class="why-choose-us">
+            <div class="scroll-animate">
+                <h2 class="section-title text-white">PORQUE ESCOLHER-NOS?</h2>
+                <div class="decorative-divider divider-white">
+                    <span class="line"></span>
+                    <i class="fa fa-leaf"></i>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="filter-tabs scroll-animate">
+                <button class="filter-btn active" data-filter="all">TODOS</button>
+                <button class="filter-btn" data-filter="desert">SOBREMESAS</button>
+                <button class="filter-btn" data-filter="coffee">CAFÉ & BAR</button>
+                <button class="filter-btn" data-filter="catering">RESTAURANTE</button>
+                <button class="filter-btn" data-filter="services">SERVIÇOS</button>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <div class="gallery-item scroll-animate fade-left delay-1" data-category="catering"><img
+                        src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=80"
+                        alt="Restaurante"></div>
+                <div class="gallery-item scroll-animate delay-2" data-category="coffee"><img
+                        src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80"
+                        alt="Café"></div>
+                <div class="gallery-item scroll-animate fade-right delay-3" data-category="services"><img
+                        src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=400&q=80"
+                        alt="Piscina"></div>
+                <div class="gallery-item scroll-animate fade-left delay-1" data-category="catering"><img
+                        src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+                        alt="Prato Especial"></div>
+                <div class="gallery-item scroll-animate delay-2" data-category="desert"><img
+                        src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=400&q=80"
+                        alt="Sobremesa"></div>
+                <div class="gallery-item scroll-animate fade-right delay-3" data-category="services"><img
+                        src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=400&q=80"
+                        alt="Vista do Resort"></div>
+            </div>
+
+            <a href="#" class="btn-view-all scroll-animate">Ver Galeria Completa</a>
+        </section>
+
+        <!-- PRÓXIMOS EVENTOS -->
+        <section class="events-section">
+            <div class="scroll-animate">
+                <h2 class="section-title">Próximos Eventos</h2>
+                <div class="decorative-divider">
+                    <span class="line"></span>
+                    <i class="fa fa-leaf"></i>
+                    <span class="line"></span>
+                </div>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card scroll-animate fade-left delay-1">
+                    <div class="event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=400&q=80');">
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">ABRIL</span>
+                        </div>
+                        <div class="event-text">
+                            <p>Noite de Gala e Música ao Vivo no salão nobre com artistas convidados...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card scroll-animate delay-2">
+                    <div class="event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80');">
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-date date-purple">
+                            <span class="day">22</span>
+                            <span class="month">JUNHO</span>
+                        </div>
+                        <div class="event-text">
+                            <p>Workshop de Culinária Internacional com degustação de vinhos premium...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="event-card scroll-animate fade-right delay-3">
+                    <div class="event-img"
+                        style="background-image: url('https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=400&q=80');">
+                    </div>
+                    <div class="event-meta">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">MAIO</span>
+                        </div>
+                        <div class="event-text">
+                            <p>Festival de Verão e atividades ao ar livre para toda a família nas dunas...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RODAPÉ -->
+        <footer class="main-footer">
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h3>ENDEREÇO</h3>
+                    <p><i class="fa fa-map-marker-alt"></i> Hotel Resort, Angola</p>
+                    <p><i class="fa fa-phone"></i> +244 9XX XXX XXX</p>
+                    <p><i class="fa fa-envelope"></i> reservas@hotel.com</p>
+                </div>
+                <div class="footer-col">
+                    <h3>INFORMAÇÃO</h3>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos & Condições</a></li>
+                        <li><a href="#">Mapa do Site</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>A MINHA CONTA</h3>
+                    <ul>
+                        <li><a href="#">A Minha Conta</a></li>
+                        <li><a href="#">Histórico de Reservas</a></li>
+                        <li><a href="#">Lista de Desejos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>NEWSLETTER</h3>
+                    <p class="news-text">Subscreva a nossa newsletter para receber novidades e ofertas exclusivas.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="O seu e-mail" required>
+                        <button type="submit">ENVIAR</button>
+                    </form>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026. Hotel Premium. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script JS Separado -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
